@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./assets/css/base.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
+    <link rel="stylesheet" href="./assets/css/history.css" />
+    <title>History</title>
+  </head>
+
+  <body>
+    <div class="button_wrap">
+      <button class="main-button_style save_button">Save</button>
+      <a class="main-button_style" href="index.html">Back to budget</a>
+    </div>
+    <ul class="history">
+      <li>May</li>
+      <li>June</li>
+      <li>July</li>
+      <li>August</li>
+    </ul>
+    <div class="validation">
+      <div class="validation-inner">
+        <div class="validation-inner_warning">
+          <p>Warning !!!</p>
+          <button type="submit" class="yes_button main-button_style">
+            YES
+          </button>
+          <button class="no_button main-button_style">NO</button>
+        </div>
+        <p class="validation-inner_confirm">
+          The current month has been stored and added to the history. Your
+          budget will be reset
+        </p>
+      </div>
+    </div>
+    <div class="modal-outer">
+      <div class="modal-inner"></div>
+      <div class="bar-canvas-container">
+        <canvas id="barChart"></canvas>
+      </div>
+      <div class="pie-canvas-container">
+        <canvas id="pieChart"></canvas>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+    <script src="./assets/history_script.js"></script>
+  </body>
+</html>

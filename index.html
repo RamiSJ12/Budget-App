@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./assets/css/base.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
+
+    <title>Monthly Budget</title>
+  </head>
+
+  <body>
+    <a class="main-button_style" href="history.html">Go to Save Budget</a>
+    <h1>Monthly Budget</h1>
+
+    <div class="grid-header">
+      <div class="subheader_one headerOne">
+        <h3>Income: <span class="income"></span></h3>
+        <input min="0" type="number" name="income" />
+        <p class="under-income_sign">
+          put your income
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#000000"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon_sign"
+          >
+            <path d="M12 19V6M5 12l7-7 7 7" />
+          </svg>
+        </p>
+      </div>
+      <div class="subheader_two">
+        <h3>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#000000"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon_sign"
+          >
+            <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
+          </svg>
+          Notes:
+        </h3>
+        <input type="text" name="notes" class="mobile_closedNotes" />
+        <ul class="notebook mobile_closedNotes"></ul>
+      </div>
+    </div>
+
+    <div class="monthlyColumns mobile_monthlyColumns-transform">
+      <!-- FIRST COLUMN -->
+      <div class="firstColumn columns">
+        <h2 class="column_title">
+          Total Expenses for Food
+        </h2>
+        <hr />
+        <label>Sum</label>
+        <p class="amount" data-name="food">0.00</p>
+        <form>
+          <div>
+            <label>Name - </label>
+            <input required id="food" type="text" />
+          </div>
+          <div>
+            <label for="food">Price - </label>
+            <input
+              required
+              min="0"
+              step=".01"
+              type="number"
+              data-name="food"
+              name="sum"
+            />
+          </div>
+          <button type="submit">Add</button>
+        </form>
+        <hr />
+        <ul class="list" data-name="food"></ul>
+      </div>
+
+      <!-- SECOND COLUMN -->
+
+      <div class="secondColumn columns">
+        <h2 class="column_title">
+          Total Expenses for Coffee and Out
+        </h2>
+        <hr />
+        <label>Sum</label>
+        <p class="amount" data-name="coffee_and_out">0.00</p>
+        <form>
+          <div>
+            <label>Name - </label>
+            <input required id="coffee_and_out" type="text" />
+          </div>
+          <div>
+            <label>Price - </label>
+            <input
+              required
+              min="0"
+              step=".01"
+              type="number"
+              data-name="coffee_and_out"
+              name="sum"
+            />
+          </div>
+          <button type="submit">Add</button>
+        </form>
+        <hr />
+        <ul class="list noSelect" data-name="coffee_and_out"></ul>
+      </div>
+
+      <!-- THIRD COLUMN -->
+
+      <div class="thirdColumn columns">
+        <h2 class="column_title">
+          Total Expenses for Other
+        </h2>
+        <hr />
+        <label>Sum</label>
+        <p class="amount" data-name="other">0.00</p>
+        <form>
+          <div>
+            <label>Name - </label>
+            <input required id="other" type="text" />
+          </div>
+          <div>
+            <label for="other">Price - </label>
+            <input
+              required
+              min="0"
+              step=".01"
+              type="number"
+              data-name="other"
+              name="sum"
+            />
+          </div>
+          <button type="submit">Add</button>
+        </form>
+        <hr />
+        <ul class="list noSelect" data-name="other"></ul>
+      </div>
+
+      <!-- FOURTH COLUMN -->
+
+      <div class="fourthColumn columns">
+        <h2 class="column_title">
+          Total Expenses for Shopping
+        </h2>
+        <hr />
+        <label>Sum</label>
+        <p class="amount" data-name="shopping">0.00</p>
+        <form>
+          <div>
+            <label>Name - </label>
+            <input required id="shopping" type="text" />
+          </div>
+          <div>
+            <label for="shopping">Price - </label>
+            <input
+              required
+              min="0"
+              step=".01"
+              type="number"
+              data-name="shopping"
+              name="sum"
+            />
+          </div>
+          <button type="submit">Add</button>
+        </form>
+        <hr />
+        <ul class="list noSelect" data-name="shopping"></ul>
+      </div>
+
+      <!-- FIFTH COLUMN -->
+
+      <div class="fifthColumn columns">
+        <h2 class="column_title">
+          Total Expenses for Travellings
+        </h2>
+        <hr />
+        <label>Sum</label>
+        <p class="amount" data-name="travel">0.00</p>
+        <form>
+          <div>
+            <label>Name - </label>
+            <input required id="travel" type="text" />
+          </div>
+          <div>
+            <label for="travel">Price - </label>
+            <input
+              required
+              min="0"
+              step=".01"
+              type="number"
+              data-name="travel"
+              name="sum"
+            />
+          </div>
+          <button type="submit">Add</button>
+        </form>
+        <hr />
+        <ul class="list noSelect" data-name="travel"></ul>
+      </div>
+    </div>
+
+    <div class="sum-section mobile_monthlyColumns-transform">
+      <p class="sum-section__money-left">
+        Money Left:
+        <span class="money-left">0.00</span>
+      </p>
+      <p class="sum-section__total">
+        Total Expenses:
+        <span class="total-expenses">0.00</span>
+      </p>
+    </div>
+
+    <script src="./assets/script.js"></script>
+  </body>
+</html>

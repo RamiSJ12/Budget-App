@@ -1,0 +1,31 @@
+{
+  "name": "project-budget",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./assets/script.js",
+  "dependencies": {
+    "chart.js": "^2.9.3",
+    "cssnano": "^4.1.10",
+    "sass": "^1.26.5"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  },
+  "scripts": {
+    "start": "parcel index.html",
+    "finish": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/markilay/project-budget.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/markilay/project-budget/issues"
+  },
+  "browserslist": [
+    "last 1 chrome versions"
+  ],
+  "homepage": "https://github.com/markilay/project-budget#readme"
+}
