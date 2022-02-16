@@ -1,0 +1,58 @@
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('./font/Ubuntu-Regular.ttf') format('truetype'),
+    url('./font/Ubuntu-Regular.woff2') format('woff2'),
+    url('./font/Ubuntu-Regular.woff') format('woff');
+
+  font-display: block;
+}
+
+:root {
+  --main-bg-color: rgba(236, 233, 229, 0.973);
+  --main-border-color: cornflowerblue;
+  --main-transition: all 0.2s;
+  --main-font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background: var(--main-bg-color);
+  font-weight: bold;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: var(--main-font-size);
+  transition: all 0.5s;
+}
+
+.main-button_style {
+  cursor: pointer;
+  background-color: black;
+  border-radius: 20px;
+  border: none;
+  color: aliceblue;
+  max-width: fit-content;
+  max-width: -moz-fit-content;
+  padding: 5px 10px;
+  font-weight: normal;
+  text-decoration: none;
+  font-size: var(--main-font-size);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+hr {
+  margin: 0.5rem 0;
+}
+
+input {
+  padding: 2px;
+}
